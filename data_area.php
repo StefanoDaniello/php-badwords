@@ -27,5 +27,14 @@ $lunghezza_password = strlen($password);
         Password:
         <?php echo $criptata. " " .$lunghezza_password ?>
     </h2>
+    <p style="color: red;">
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_POST["name"]) || empty($_POST["password"])) {
+                    echo "Entrambi i campi devono essere compilati.";
+                }
+            }
+        ?>
+    </p>
 </body>
 </html>
