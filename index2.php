@@ -3,6 +3,11 @@
 $name = $_POST['name'];
 $password = $_POST['password'];
 $criptata = str_repeat("*", strlen($password));
+// Lunghezza della variabile $name
+$lunghezza_nome = strlen($name);
+
+// Lunghezza della variabile $password
+$lunghezza_password = strlen($password);
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +20,11 @@ $criptata = str_repeat("*", strlen($password));
 <body>
     <h2>
         Name:
-        <?php echo $name; ?>
+        <?php echo $name. " ".$lunghezza_nome ?>
     </h2>
     <h2>
         Password:
-        <?php echo $criptata; ?>
+        <?php echo $criptata. " " .$lunghezza_password ?>
     </h2>
 </body>
 </html>
